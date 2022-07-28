@@ -19,7 +19,9 @@ function showTime() {
   mins = mins < 10 ? "0" + mins : mins;
   sec = sec < 10 ? "0" + sec : sec;
 
-  let currentTime = hours + ":" + mins + ":" + sec + ":" + am_pm;
+  let currentTime = "/" + hours + ":" + mins + ":" + sec + ":" + am_pm;
+  let currentDate = time.toDateString();
+  document.getElementById("date").innerHTML = currentDate;
   document.getElementById("time").innerHTML = currentTime;
 }
 showTime();
